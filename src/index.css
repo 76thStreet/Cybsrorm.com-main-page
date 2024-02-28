@@ -1,0 +1,39 @@
+@import url('https://fonts.cdnfonts.com/css/sf-ui-display');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #181a20;
+  color: white;
+
+  font-family: 'SF UI Display', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+  font-size: 18px;
+}
+
+@layer utilities {
+  .checkbox_white {
+    @apply w-4 h-4 border rounded-sm appearance-none checked:bg-gray-300 checked:hover:ring-white checked:focus:outline-none
+  }
+
+  html {
+    @apply no-scrollbar
+  }
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
